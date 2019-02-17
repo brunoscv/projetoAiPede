@@ -35,6 +35,15 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'location',
+        children: [
+          {
+            path: '',
+            loadChildren: '../location/location.module#LocationPageModule'
+          }
+        ]
+      },
+      {
         path: '',
         redirectTo: '/tabs/tab1',
         pathMatch: 'full'
