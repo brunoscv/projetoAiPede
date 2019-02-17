@@ -1,9 +1,20 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab Three
+      Buscar Padarias
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+
+<ion-searchbar placeholder="Pesquisar lugares..." color="danger" (ionInput)="buscarPadarias($event)">
+</ion-searchbar>
+
+<ion-list inset>
+   <ion-card *ngFor="let bakery of listBakery">
+   <p>{{bakery.name}}</p>
+   </ion-card>
+</ion-list>
+
+</ion-content>
