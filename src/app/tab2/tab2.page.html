@@ -1,9 +1,19 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab Two
+      Favoritar estabelecimento
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+
+  <ion-list inset>
+   <ion-card *ngFor="let dt of data">
+   <button (ionInput)="addFavorito($event)">{{dt.nome}}</button>
+   <p>{{dt.favoritos}}</p>
+   </ion-card>
+</ion-list>
+
+
+</ion-content>

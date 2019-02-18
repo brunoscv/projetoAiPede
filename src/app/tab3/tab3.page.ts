@@ -9,23 +9,7 @@ import { NavController } from '@ionic/angular';
 })
 export class Tab3Page {
 
-  public data = [
-    {
-      id:1,
-      nome: 'Padaria modelo',
-      favoritos:0, 
-    },
-    {
-      id:2,
-      nome: 'Panificadora Alfa',
-      favoritos:0, 
-    },
-    {
-      id:3,
-      nome: 'Panificadora saraiva',
-      favoritos:0, 
-    }
-  ];
+  
 
   public listBakery: Array<any>;
   
@@ -69,18 +53,7 @@ export class Tab3Page {
 
     }
 
-    public addFavorito(event: any){
-      var name=event.target.value;
-      for(let add of this.data){
-        var qtd=add.favoritos;
-        if(add.nome.toLowerCase()==name.toLowerCase()){
-          qtd++;
-          add.favoritos=qtd;
-        }else{
-          console.log("Error");
-        }
-      }
-    }
+
 
 
 }
