@@ -101,11 +101,12 @@ loadPoints() {
       this.markers = [];
       for (const key of Object.keys(this.padarias)) {
         console.log(this.padarias[key].nome )
-        let latLng = new google.maps.LatLng(this.padarias[key].latitude, this.padarias[key].longitude);
+        let latLng = new google.maps.LatLng(this.padarias[key].lat, this.padarias[key].lng);
 
         let marker = new google.maps.Marker({
           position: latLng,
-          title: this.padarias[key].nome
+          title: this.padarias[key].nome,
+          icon: 'https://i.imgur.com/T43eu9X.png',
         })
 
         let content = `
