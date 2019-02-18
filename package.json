@@ -37,8 +37,9 @@
     "express": "^4.16.4",
     "jsonwebtoken": "^8.4.0",
     "rxjs": "~6.3.3",
-    "sqlite3": "^4.0.6",
     "rxjs-compat": "^6.4.0",
+    "sqlite3": "^4.0.6",
+    "storage": "^0.2.0",
     "zone.js": "~0.8.29"
   },
   "devDependencies": {
