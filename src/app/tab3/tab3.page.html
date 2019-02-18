@@ -13,7 +13,14 @@
 
 <ion-list inset>
    <ion-card *ngFor="let bakery of listBakery">
-   <p>{{bakery.name}}</p>
+   <button (ionInput)="addFavorito($event)">{{bakery.name}}</button>
+   </ion-card>
+</ion-list>
+
+<ion-list inset>
+   <ion-card *ngFor="let dt of data">
+   <button (ionInput)="addFavorito($event)">{{dt.nome}}</button>
+   <p>{{dt.favoritos}}</p>
    </ion-card>
 </ion-list>
 

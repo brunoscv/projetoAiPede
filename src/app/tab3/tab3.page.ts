@@ -9,15 +9,33 @@ import { NavController } from '@ionic/angular';
 })
 export class Tab3Page {
 
-  public listBakery: Array<any>;
+  public data = [
+    {
+      id:1,
+      nome: 'Padaria modelo',
+      favoritos:0, 
+    },
+    {
+      id:2,
+      nome: 'Panificadora Alfa',
+      favoritos:0, 
+    },
+    {
+      id:3,
+      nome: 'Panificadora saraiva',
+      favoritos:0, 
+    }
+  ];
 
+  public listBakery: Array<any>;
+  
   constructor(public navCtrl: NavController, 
     public bakeryService : BakeryService) { 
 
       this.inicializaPadarias();
 
     }
-
+  
     inicializaPadarias(){
       this.bakeryService.getBakeries().subscribe(
         data => {
@@ -49,6 +67,17 @@ export class Tab3Page {
         })
       } 
 
+    }
+
+    public addFavorito(event: any){
+      var name=event.target.value;
+      for(let add of this.data){
+        if(add.nome.toLowerCase()==name.toLowerCase()){
+          add.favoritos++;
+        }else{
+          console.log("Error");
+        }
+      }
     }
 
 
