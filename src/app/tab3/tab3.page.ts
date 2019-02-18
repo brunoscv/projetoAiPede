@@ -72,8 +72,10 @@ export class Tab3Page {
     public addFavorito(event: any){
       var name=event.target.value;
       for(let add of this.data){
+        var qtd=add.favoritos;
         if(add.nome.toLowerCase()==name.toLowerCase()){
-          add.favoritos++;
+          qtd++;
+          add.favoritos=qtd;
         }else{
           console.log("Error");
         }
