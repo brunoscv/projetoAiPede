@@ -17,13 +17,7 @@ import { AuthModule } from  './auth/auth.module';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-<<<<<<< HEAD
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpModule, BakeryDetailPageModule],
-=======
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
-    AuthModule
-  ],
->>>>>>> d7ffb86ee2c206b5ca3bf1d80a256b5ded91594d
   providers: [
     StatusBar,
     SplashScreen,
