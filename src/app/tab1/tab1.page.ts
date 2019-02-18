@@ -1,6 +1,8 @@
+import { BakeryDetailPage } from './../bakery-detail/bakery-detail.page';
 import { BakeryService } from './../services/bakery.service';
 import { Component } from '@angular/core';
 import { NavController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tab1',
@@ -12,7 +14,8 @@ export class Tab1Page {
   public listBakery: Array<any>;
 
   constructor(public navCtrl: NavController, 
-    public bakeryService : BakeryService) { 
+    public bakeryService : BakeryService,
+    private router: Router) { 
 
       this.bakeryService.getBakeries().subscribe(
         data => {
@@ -27,7 +30,14 @@ export class Tab1Page {
         }
       );
 
-    }
+     
+
+  }
+
+  bakeryMenu(id) {
+    this.navCtrl.navigateForward('bakery-detail');
+    console.log();
+  }
 
 
 }

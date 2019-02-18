@@ -5,16 +5,16 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class BakeryService {
-  private baseURL = "https://api.myjson.com/bins/";
+  private baseURL = "https://my-json-server.typicode.com/brunoscv/bakery/";
 
   constructor( public http: Http) { }
 
   public getBakeries() {
-    return this.http.get(this.baseURL + "17dar4");
+    return this.http.get(this.baseURL + "bakeries");
   }
 
-  public getMenuBakeries() {
-    return this.http.get(this.baseURL + "17dar4");
+  public getMenuBakeries(id: string) {
+    return this.http.get(this.baseURL + "bakery_menu?bakeryId=" + id);
   }
 
 

@@ -1,3 +1,4 @@
+import { BakeryDetailPageModule } from './bakery-detail/bakery-detail.module';
 import { BakeryService } from './services/bakery.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -14,7 +15,7 @@ import { HttpModule } from '@angular/http';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpModule, BakeryDetailPageModule],
   providers: [
     StatusBar,
     SplashScreen,

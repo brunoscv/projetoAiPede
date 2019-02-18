@@ -7,13 +7,13 @@
 </ion-header>
 
 <ion-content>
-  <ion-card *ngFor="let bakery of listBakery">
+  <ion-card *ngFor="let bakery of listBakery" (click)="bakeryMenu()">
     <ion-item>
       <ion-avatar item-start>
         <img [src]="bakery.img">
       </ion-avatar>
-      <h2>{{bakery.name}}</h2>
-      <p>{{bakery.createdAt}}</p>
+      <h2>{{bakery.id}}</h2>
+      <p>{{bakery.title}}</p>
     </ion-item>
       
     <img [src]="bakery.img">
